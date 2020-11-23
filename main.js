@@ -24,7 +24,7 @@ var app = new Vue({
                 this.sortByYearDescending(this.cds)
             }
         },
-        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti
+        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti(Ascendente)
         sortByYear(cds_array){
 
             cds_array.sort(function(a, b) {
@@ -33,7 +33,7 @@ var app = new Vue({
             app.$forceUpdate();
 
         },
-        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti
+        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti(Discendente)
         sortByYearDescending(cds_array){
 
             cds_array.sort(function(a, b) {
@@ -42,7 +42,7 @@ var app = new Vue({
             app.$forceUpdate();
 
         },
-        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti
+        //funzione che genera l'array dei cd richiedendo i dati a un API
         unsortedCds(){
             const self = this;
             axios

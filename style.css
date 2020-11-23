@@ -47,26 +47,6 @@ label{
     border: 1px solid black;
     background: #6699ff;
 }
-/* .buttons{
-    display: flex;
-    align-items: center;
-}
-
-.buttons i{
-    font-size: 25px;
-    margin-left: 30px;
-    cursor: pointer;
-}
-
-.btn{
-    margin-left: 20px;
-    background: #6699ff;
-    padding: 10px ;
-    cursor: pointer;
-    font-weight: bolder;
-    border-color: #003399;
-    color: white;
-} */
 
 .cds-container{
     width: 100%;
