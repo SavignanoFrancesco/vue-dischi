@@ -10,7 +10,7 @@ body{
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: #00004d;
 }
@@ -18,21 +18,36 @@ header{
 header i{
     font-size: 40px;
     color: #6699ff;
+    padding-left: 10px;
 }
 
 select{
-    margin: 40px 5px;
+    margin: 5px;
     cursor: pointer;
 }
 
 label{
-    margin: 40px 5px;
+    margin:5px;
     color: white;
     font-weight: bolder;
     font-size: 18px;
 }
 
-.buttons{
+.selectors{
+    display: flex;
+    padding: 10px 10px;
+}
+
+.genre-selector{
+    margin-right: 20px;
+    border: 1px solid black;
+    background: #6699ff;
+}
+.sort-selector{
+    border: 1px solid black;
+    background: #6699ff;
+}
+/* .buttons{
     display: flex;
     align-items: center;
 }
@@ -51,7 +66,7 @@ label{
     font-weight: bolder;
     border-color: #003399;
     color: white;
-}
+} */
 
 .cds-container{
     width: 100%;

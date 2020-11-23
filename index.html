@@ -14,21 +14,31 @@
 
             <header>
                 <i class="fas fa-music"></i>
-                <div class="">
-                    <label for="genres">Choose a genre:  </label>
-                    <select v-model="genre_selected" @change="genreChange($event.target.value)" id="genre-selector" name="genres">
-                        <option value="All">All</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Jazz">Jazz</option>
-                        <option value="Metal">Metal</option>
-                    </select>
+                <div class="selectors">
+                    <div class="genre-selector">
+                        <label for="genres">Choose a genre:  </label>
+                        <select v-model="genre_selected" @change="genreChange($event.target.value)" id="" name="genres">
+                            <option value="All">All</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Metal">Metal</option>
+                        </select>
+                    </div>
+                    <div class="sort-selector">
+                        <label for="genres">Choose sort:  </label>
+                        <select v-model="order_selected" @change="sortChange($event.target.value)" id="" name="genres">
+                            <option value="Unsorted">Unsorted</option>
+                            <option value="Ascending">Ascending</option>
+                            <option value="Descending">Descending</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="buttons">
+                <!-- <div class="buttons">
                     <button type="button" name="button" class="btn" @click="sortByYear(cds);">Ascending sort by year</button>
                     <button type="button" name="button" class="btn" @click="sortByYearDescending(cds)">Descending sort by year</button>
                     <i class="fas fa-undo-alt" @click="unsortedCds()"></i>
-                </div>
+                </div> -->
             </header>
 
             <div class="cds-container">
