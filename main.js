@@ -40,7 +40,9 @@ var app = new Vue({
 
             //ripeti se ci sono stati scambi di oggetti nell'array
             }while(flag == true);
-            console.log(this.cds);
+
+            //ricarica la pagina con l'array ordinato
+            app.$forceUpdate();
 
         }
     },
