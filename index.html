@@ -9,6 +9,28 @@
     </head>
     <body>
 
+        <div id="root">
+
+            <header>
+                <label for="genres">Choose a genre:  </label>
+                <select id="genre-selector" name="genres">
+                    <option value="volvo">Pop</option>
+                    <option value="saab">Rock</option>
+                    <option value="mercedes">Jazz</option>
+                    <option value="audi">Metal</option>
+                </select>
+            </header>
+            <div class="cds-container">
+                <div class="cd-card" v-for="obj in cds" v-if="cds.length == 10">
+                    <h1>{{obj.author}}</h1>
+                    <img :src="obj.poster" :alt="obj.title">
+                    <p>{{obj.genre}}</p>
+                    <p>{{obj.year}}</p>
+                </div>
+            </div>
+
+        </div>
+
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

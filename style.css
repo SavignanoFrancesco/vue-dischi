@@ -3,3 +3,39 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+select{
+    margin: 40px 5px;
+}
+
+label{
+    margin: 40px 5px;;
+}
+
+.cds-container{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    /* background: green; */
+}
+
+.cd-card{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px;
+    background-color: whitesmoke;
+}
+
+.cd-card img{
+    width: 250px;
+    height: 250px;
+}
