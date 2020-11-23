@@ -55,7 +55,6 @@ var app = new Vue({
 
                 self.cds = risposta.data.response;
 
-                console.log(self.cds);
             });
 
     }
