@@ -13,15 +13,17 @@
 
             <header>
                 <label for="genres">Choose a genre:  </label>
-                <select id="genre-selector" name="genres">
-                    <option value="volvo">Pop</option>
-                    <option value="saab">Rock</option>
-                    <option value="mercedes">Jazz</option>
-                    <option value="audi">Metal</option>
+                <select v-model="genre_selected" @change="genreChange($event.target.value)" id="genre-selector" name="genres">
+                    <option value="All">All</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
                 </select>
             </header>
+
             <div class="cds-container">
-                <div class="cd-card" v-for="obj in cds" v-if="cds.length == 10">
+                <div class="cd-card" v-for="obj in cds" v-if="cds.length == 10 && (obj.genre == genre_selected || genre_selected == 'All')">
                     <h1>{{obj.author}}</h1>
                     <img :src="obj.poster" :alt="obj.title">
                     <p>{{obj.genre}}</p>

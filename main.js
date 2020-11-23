@@ -1,9 +1,15 @@
 var app = new Vue({
     el: '#root',
     data: {
-        cds: []
+        cds: [],
+        genre_selected: 'All'
     },
-
+    methods: {
+        genreChange(value){
+            // console.log(value);
+            this.genre_selected = value;
+        }
+    },
     mounted() {
         const self = this;
 
