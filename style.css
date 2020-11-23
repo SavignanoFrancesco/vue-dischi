@@ -32,6 +32,17 @@ label{
     font-size: 18px;
 }
 
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.buttons i{
+    font-size: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
 .btn{
     margin-left: 20px;
     background: #6699ff;

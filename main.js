@@ -20,18 +20,32 @@ var app = new Vue({
             });
             app.$forceUpdate();
 
+        },
+        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti
+        sortByYearDescending(cds_array){
+
+            cds_array.sort(function(a, b) {
+                return b.year - a.year;
+            });
+            app.$forceUpdate();
+
+        },
+        //funzione che prende come parametro l'array di cd e lo riordina in base al valore della proprietà anno degli oggetti
+        unsortedCds(){
+            const self = this;
+            axios
+                .get('https://flynn.boolean.careers/exercises/api/array/music')
+                .then(function(risposta) {
+
+                    self.cds = risposta.data.response;
+
+                });
+
         }
     },
     mounted() {
-        const self = this;
 
-        axios
-            .get('https://flynn.boolean.careers/exercises/api/array/music')
-            .then(function(risposta) {
-
-                self.cds = risposta.data.response;
-
-            });
+        this.unsortedCds();
 
     }
 });
