@@ -28,9 +28,9 @@ var app = new Vue({
                     //se l'anno dell'oggetto in i è maggiore dell'anno dell'oggetto precedente, scambia di posizione la coppia di oggetti e imposta flag=true
                     if (parseInt(this.cds[i].year) < parseInt(this.cds[i - 1].year)) {
 
-                        let tmp = this.cds[i - 1].year;
-                        this.cds[i - 1].year = this.cds[i].year;
-                        this.cds[i].year = tmp;
+                        let tmp = this.cds[i - 1];
+                        this.cds[i - 1] = this.cds[i];
+                        this.cds[i] = tmp;
 
                         flag = true;
 
@@ -40,6 +40,7 @@ var app = new Vue({
 
             //ripeti se ci sono stati scambi di oggetti nell'array
             }while(flag == true);
+            console.log(this.cds);
 
         }
     },
@@ -51,7 +52,7 @@ var app = new Vue({
             .then(function(risposta) {
 
                 self.cds = risposta.data.response;
-                self.sortByYear(self.cds);
+
                 console.log(self.cds);
             });
 
